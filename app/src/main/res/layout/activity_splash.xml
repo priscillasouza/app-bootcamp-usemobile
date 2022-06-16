@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageViewIconBigCircle"
+        android:layout_width="53.22dp"
+        android:layout_height="53.22dp"
+        android:layout_marginTop="271.23dp"
+        android:src="@drawable/ic_big_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewIconMidlleCircle"
+        android:layout_width="15.37dp"
+        android:layout_height="10.65dp"
+        android:layout_marginTop="5.35dp"
+        android:src="@drawable/ic_medium_circle"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewIconBigCircle"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/imageViewIconBigCircle"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIconBigCircle" />
+
+    <ImageView
+        android:id="@+id/imageViewIconSmallCircle"
+        android:layout_width="10.75dp"
+        android:layout_height="10.79dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/ic_small_circle"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutLetters"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutLetters"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewIconBigCircle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.92dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIconMidlleCircle">
+
+        <ImageView
+            android:id="@+id/imageViewIconLetterU"
+            android:layout_width="37.70dp"
+            android:layout_height="39dp"
+            android:src="@drawable/ic_letter_u" />
+
+        <ImageView
+            android:id="@+id/imageViewIconLetterS"
+            android:layout_width="37.70dp"
+            android:layout_height="39dp"
+
+            android:src="@drawable/ic_letter_s" />
+
+        <ImageView
+            android:id="@+id/imageViewIconLetterE"
+            android:layout_width="40.16dp"
+            android:layout_height="39dp"
+            android:src="@drawable/ic_letter_e" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
