@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/text_home_menu" />
+    <item
+        android:id="@+id/registerAnimalFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_register"
+        android:title="@string/text_register_menu" />
+    <item
+        android:id="@+id/favoritesFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_favorite_menu"
+        android:title="@string/text_favorite_menu" />
+</menu>
