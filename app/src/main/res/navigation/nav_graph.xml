@@ -7,17 +7,30 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.appbootcampusemobile.fragments.HomeFragment"
+        android:name="com.example.appbootcampusemobile.presentation.fragments.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsAnimalFragment"
+            app:destination="@id/detailsAnimalFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerAnimalFragment"
-        android:name="com.example.appbootcampusemobile.fragments.RegisterAnimalFragment"
+        android:name="com.example.appbootcampusemobile.presentation.fragments.RegisterAnimalFragment"
         android:label="Cadastrar"
         tools:layout="@layout/fragment_register_animal" />
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.appbootcampusemobile.fragments.FavoritesFragment"
+        android:name="com.example.appbootcampusemobile.presentation.fragments.FavoritesFragment"
         android:label="Favoritos"
         tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/detailsAnimalFragment"
+        android:name="com.example.appbootcampusemobile.presentation.fragments.DetailsAnimalFragment"
+        android:label="fragment_details_animal"
+        tools:layout="@layout/fragment_details_animal" >
+        <action
+            android:id="@+id/action_detailsAnimalFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
