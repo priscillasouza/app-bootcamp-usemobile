@@ -10,7 +10,37 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="Text_title_item_recycler_view" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/title_item_recycler_view</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Text_description_item_recycler_view" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/description_item_recycler_view</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Text_title_item_details" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Text_description_item_details" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>

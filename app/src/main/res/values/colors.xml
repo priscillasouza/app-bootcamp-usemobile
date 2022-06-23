@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="background_bottom_navigation">#45BBEF</color>
+    <color name="background_button">#7331F9</color>
+    <color name="border_inputs">#262626</color>
+    <color name="text_color_toolbar">#158BBF</color>
+    <color name="description_item_recycler_view">#666666</color>
+    <color name="title_item_recycler_view">#158BBF</color>
 </resources>
