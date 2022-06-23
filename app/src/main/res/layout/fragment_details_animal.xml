@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:textSize="18sp"
+        style="@style/Text_title_item_details"
         app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/shapeableImageViewDetails" />
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
-        android:textSize="18sp"
+        style="@style/Text_title_item_details"
         app:layout_constraintBottom_toBottomOf="@id/textViewNameDetails"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toEndOf="@id/textViewNameDetails"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="@string/text_view_age_details"
-        android:textSize="18sp"
+        style="@style/Text_title_item_details"
         app:layout_constraintBottom_toBottomOf="@id/textViewAgeDetails"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toEndOf="@id/textViewAgeDetails"
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textSize="14sp"
+        style="@style/Text_description_item_details"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewNameDetails" />
 
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:textSize="14sp"
+        style="@style/Text_description_item_details"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewSpeciesDetails" />
 </androidx.constraintlayout.widget.ConstraintLayout>
