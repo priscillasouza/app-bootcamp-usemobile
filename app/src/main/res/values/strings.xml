@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">App Bootcamp Usemobile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_home_menu">Home</string>
+    <string name="text_register_menu">Cadastrar</string>
+    <string name="text_favorite_menu">Favoritos</string>
+    <string name="title_app_bar_home">Home</string>
+    <string name="title_app_bar_register">Cadastrar</string>
+    <string name="text_hint_name">Nome</string>
+    <string name="text_hint_image_link">Link da imagem</string>
+    <string name="text_hint_description">Descrição</string>
+    <string name="text_hint_specie">Espécie</string>
+    <string name="text_hint_age">Idade</string>
+    <string name="text_button_register">Cadastrar</string>
+    <string name="text_app_bar_favorite">Favoritos</string>
+    <string name="text_view_age_details">anos</string>
 </resources>
