@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragments.DetailsAnimalFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleCentered="true"
+            app:titleTextColor="@color/text_color_toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageViewDetails"
+        android:layout_width="227dp"
+        android:layout_height="227dp"
+        android:layout_marginTop="17dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarDetails"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+    <TextView
+        android:id="@+id/textViewNameDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shapeableImageViewDetails" />
+
+    <TextView
+        android:id="@+id/textViewAgeDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewNameDetails"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toEndOf="@id/textViewNameDetails"
+        app:layout_constraintTop_toTopOf="@id/textViewNameDetails" />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/text_view_age_details"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAgeDetails"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toEndOf="@id/textViewAgeDetails"
+        app:layout_constraintTop_toTopOf="@id/textViewNameDetails" />
+
+    <TextView
+        android:id="@+id/textViewSpeciesDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNameDetails" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSpeciesDetails" />
+</androidx.constraintlayout.widget.ConstraintLayout>
