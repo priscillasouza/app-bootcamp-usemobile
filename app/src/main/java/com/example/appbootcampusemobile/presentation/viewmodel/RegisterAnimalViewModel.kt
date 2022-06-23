@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class AnimalViewModel : ViewModel() {
+class RegisterAnimalViewModel : ViewModel() {
 
     private val repositoryImpl: AnimalRepositoryImpl = AnimalRepositoryImpl()
 

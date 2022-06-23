@@ -8,16 +8,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.appbootcampusemobile.databinding.FragmentRegisterAnimalBinding
-import com.example.appbootcampusemobile.presentation.adapter.ListAnimalAdapter
-import com.example.appbootcampusemobile.presentation.viewmodel.AnimalViewModel
+import com.example.appbootcampusemobile.presentation.viewmodel.RegisterAnimalViewModel
 
 class RegisterAnimalFragment : Fragment() {
 
     private lateinit var binding: FragmentRegisterAnimalBinding
-
-    private lateinit var registerAnimalViewModel: AnimalViewModel
-
-    private lateinit var adpterListAnimal: ListAnimalAdapter
+    private lateinit var registerAnimalViewModel: RegisterAnimalViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +21,7 @@ class RegisterAnimalFragment : Fragment() {
     ): View {
         binding = FragmentRegisterAnimalBinding.inflate(layoutInflater, container, false)
 
-        registerAnimalViewModel = ViewModelProvider(this).get(AnimalViewModel::class.java)
+        registerAnimalViewModel = ViewModelProvider(this).get(RegisterAnimalViewModel::class.java)
 
         return binding.root
     }
@@ -39,16 +35,18 @@ class RegisterAnimalFragment : Fragment() {
     private fun onObserver() {
         registerAnimalViewModel.apply {
             registerAnimalSuccess.observe(viewLifecycleOwner) { response ->
+                binding.inputEditTextName.text.toString()
+                binding.inputEditTextDescription.text.toString()
+                binding.inputEditTextImageLink.text.toString()
+                binding.inputEditTextSpecies.text.toString()
+                binding.inputEditTextAge.text.toString().toInt()
                 Toast.makeText(
                     requireContext(),
                     "Animal cadastrado com sucesso",
                     Toast.LENGTH_SHORT
                 ).show()
-                binding.inputEditTextName.text.toString()
-                binding.inputEditTextDescription.text.toString()
-                binding.inputEditTextImageLink.text.toString()
             }
-            registerAnimalError.observe(viewLifecycleOwner) { response ->
+            registerAnimalError.observe(viewLifecycleOwner) {
                 Toast.makeText(requireContext(), "Houve uma falha no cadastro", Toast.LENGTH_SHORT)
                     .show()
             }
