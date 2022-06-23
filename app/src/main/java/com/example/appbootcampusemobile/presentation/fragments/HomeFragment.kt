@@ -6,16 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appbootcampusemobile.databinding.FragmentHomeBinding
 import com.example.appbootcampusemobile.presentation.adapter.ListAnimalAdapter
 import com.example.appbootcampusemobile.presentation.viewmodel.HomeViewModel
+import com.example.appbootcampusemobile.presentation.viewmodel.HomeViewModelFactory
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var adapterRecyclerViewListAnimals: ListAnimalAdapter
 
@@ -25,7 +24,7 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
-        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        homeViewModel = HomeViewModelFactory(requireContext()).create(HomeViewModel::class.java)
         homeViewModel.getAnimals()
 
         return binding.root
@@ -42,7 +41,6 @@ class HomeFragment : Fragment() {
             animalResponse.observe(viewLifecycleOwner) { response ->
                 adapterRecyclerViewListAnimals.setList(response)
             }
-
             error.observe(viewLifecycleOwner) {
                 Toast.makeText(
                     requireContext(),
@@ -56,6 +54,9 @@ class HomeFragment : Fragment() {
     private fun startAdapter() {
         binding.recyclerViewListAnimals.apply {
             adapterRecyclerViewListAnimals = ListAnimalAdapter()
+            adapterRecyclerViewListAnimals.setOnClickFavorite {
+                homeViewModel.updateFavorites(animal = it)
+            }
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = adapterRecyclerViewListAnimals
         }

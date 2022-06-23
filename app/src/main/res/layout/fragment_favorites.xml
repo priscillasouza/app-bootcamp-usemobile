@@ -4,35 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".presentation.fragments.HomeFragment">
+    tools:context=".presentation.fragments.FavoritesFragment">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarHome"
+        android:id="@+id/appBarFavorites"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbarHome"
+            android:id="@+id/toolbarFavorites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="@string/title_app_bar_home"
+            app:title="@string/text_app_bar_favorite"
             app:titleCentered="true"
             app:titleTextColor="@color/text_color_toolbar" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewListAnimals"
+        android:id="@+id/recyclerViewListFavoritesAnimals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarHome"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/appBarFavorites"
+        app:layout_constraintVertical_bias="0.01"
         tools:listitem="@layout/item_layout_list_animal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

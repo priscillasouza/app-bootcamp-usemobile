@@ -6,11 +6,13 @@ import com.example.appbootcampusemobile.domain.model.Animal
 class AnimalToModelMapper: IMapper<AnimalResponse, Animal> {
     override fun transform(entity: AnimalResponse): Animal {
         return Animal(
+            id = entity.id ?: "",
             name = entity.name,
             description = entity.description,
             image = entity.image,
             species = entity.species,
-            age = entity.age
+            age = entity.age,
+            favorite = false
         )
     }
 }

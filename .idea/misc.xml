@@ -9,9 +9,13 @@
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/background_inputs.xml" value="0.2225" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_add.xml" value="0.1685" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_favorite.xml" value="0.1685" />
+        <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_favorite_disable.xml" value="0.196" />
+        <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_favorite_enable.xml" value="0.196" />
+        <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_favorite_menu.xml" value="0.196" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_home.xml" value="0.1685" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2975" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/ic_register.xml" value="0.1685" />
+        <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/drawable/selector_favorite_item.xml" value="0.196" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/activity_home.xml" value="0.1838392475416845" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/activity_splash.xml" value="0.25" />
@@ -20,7 +24,7 @@
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/fragment_register_animal.xml" value="0.33" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/item_layout_favorites_animal.xml" value="0.17999144933732364" />
-        <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/item_layout_list_animal.xml" value="0.33" />
+        <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/layout/item_layout_list_animal.xml" value="0.25" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1838392475416845" />
         <entry key="..\:/Users/prisc/Documents/AppBootcampUsemobile/app/src/main/res/menu/menu_app_bar.xml" value="0.22" />
       </map>

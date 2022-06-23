@@ -13,4 +13,10 @@ interface IAnimalRepository {
     ): Flow<List<Animal>>
 
     suspend fun getAnimals(): Flow<List<Animal>>
+
+    suspend fun deleteAnimal(animal: Animal): Flow<Animal>
+
+    suspend fun addAnimal(animal: Animal): Flow<Animal>
+
+    suspend fun getFavorites(): Flow<List<Animal>>
 }

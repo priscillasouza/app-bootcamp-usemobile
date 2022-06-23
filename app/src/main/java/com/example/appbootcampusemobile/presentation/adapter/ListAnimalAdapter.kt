@@ -1,5 +1,6 @@
 package com.example.appbootcampusemobile.presentation.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -13,11 +14,12 @@ import com.example.appbootcampusemobile.presentation.fragments.HomeFragmentDirec
 class ListAnimalAdapter : RecyclerView.Adapter<ListAnimalAdapter.AnimalViewHolder>() {
 
     private var animalList = arrayListOf<Animal>()
+    private var onClickFavorite: ((Animal) -> Unit?)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimalViewHolder {
         val binding =
             ItemLayoutListAnimalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return AnimalViewHolder(binding)
+        return AnimalViewHolder(binding, onClickFavorite)
     }
 
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
@@ -36,18 +38,30 @@ class ListAnimalAdapter : RecyclerView.Adapter<ListAnimalAdapter.AnimalViewHolde
         }
     }
 
-    class AnimalViewHolder(val layout: ItemLayoutListAnimalBinding) :
+    fun setOnClickFavorite(run: ((Animal) -> Unit?)?) {
+        onClickFavorite = run
+    }
+
+    class AnimalViewHolder(val layout: ItemLayoutListAnimalBinding, val onClickFavorite: ((Animal) -> Unit?)?) :
         RecyclerView.ViewHolder(layout.root) {
         fun onBind(animal: Animal) {
-            layout.textViewName.text = animal.name
-            layout.textViewDescription.text = animal.description
-            layout.imageViewAnimal.load(animal.image) {
-                error(R.drawable.ic_launcher_background)
-            }
+            layout.apply {
+                textViewName.text = animal.name
+                textViewDescription.text = animal.description
+                imageViewAnimal.load(animal.image) {
+                    error(R.drawable.ic_launcher_background)
+                }
 
-            layout.itemRecyclerView.setOnClickListener {
-                val action = HomeFragmentDirections.actionHomeFragmentToDetailsAnimalFragment()
-                layout.itemRecyclerView.findNavController().navigate(action)
+                checkBoxFavorite.isChecked = animal.favorite
+
+                checkBoxFavorite.setOnClickListener {
+                    onClickFavorite?.invoke(animal.copy(favorite = animal.favorite.not()))
+                }
+
+                itemRecyclerView.setOnClickListener {
+                    val action = HomeFragmentDirections.actionHomeFragmentToDetailsAnimalFragment(animal)
+                    itemRecyclerView.findNavController().navigate(action)
+                }
             }
         }
     }
